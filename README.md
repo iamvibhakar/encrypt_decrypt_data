@@ -8,9 +8,10 @@ Install dependencies:
 
 ```bash
 npm install
-
+```
 
 Run the script:
 
 ```bash
 node index.js
+```
