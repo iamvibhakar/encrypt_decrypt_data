@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Encryption Tool</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Toastr CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Data Encryption Tool</h1>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-lock me-2"></i>Encrypt Data
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="plainText" class="form-label">Text to Encrypt:</label>
+                            <textarea class="form-control" id="plainText" rows="5"
+                                placeholder='Paste JSON data here'></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="encryptionKey" class="form-label">Encryption Key:</label>
+                            <input type="text" class="form-control" id="encryptionKey"
+                                placeholder="Enter your encryption key">
+                        </div>
+                        <button id="encryptBtn" class="btn btn-primary operation-btn">
+                            <i class="fas fa-lock me-2"></i>Encrypt
+                        </button>
+
+                        <div class="result-container" id="encryptResultContainer" style="display: none;">
+                            <button class="btn btn-sm btn-outline-secondary copy-btn"
+                                onclick="copyToClipboard('encryptResult')">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                            <h6>Encrypted Result:</h6>
+                            <div id="encryptResult" class="text-break"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-unlock me-2"></i>Decrypt Data
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="encryptedText" class="form-label">Text to Decrypt:</label>
+                            <textarea class="form-control" id="encryptedText" rows="5"
+                                placeholder="Paste encrypted data here"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="decryptionKey" class="form-label">Decryption Key:</label>
+                            <input type="text" class="form-control" id="decryptionKey"
+                                placeholder="Enter your decryption key">
+                        </div>
+                        <button id="decryptBtn" class="btn btn-success operation-btn">
+                            <i class="fas fa-unlock me-2"></i>Decrypt
+                        </button>
+
+                        <div class="result-container" id="decryptResultContainer" style="display: none;">
+                            <button class="btn btn-sm btn-outline-secondary copy-btn"
+                                onclick="copyToClipboard('decryptResult')">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                            <h6>Decrypted Result:</h6>
+                            <div id="decryptResult" class="text-break"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- CryptoJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Toastr JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <!-- Sweatalert CDN -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Custom Script -->
+    <script src="/assets/js/script.js"></script>
+</body>
+
+</html>
