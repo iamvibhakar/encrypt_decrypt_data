@@ -13,5 +13,5 @@ npm install
 Run the script:
 
 ```bash
-node index.js
+index.html 
 ```

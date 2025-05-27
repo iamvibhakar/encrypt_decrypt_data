@@ -1,3 +1,7 @@
+// ---------------- Backup code for encryption/decryption ----------------
+// This code is used to encrypt and decrypt data for secure storage.
+// It uses the 'encryption-check' module to perform the encryption and decryption.
+
 
 const { encrypt, decrypt } = require("./encryption-check")
 
