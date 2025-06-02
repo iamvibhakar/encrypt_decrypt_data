@@ -27,8 +27,12 @@ body {
 .copy-btn {
     position: absolute;
     top: 5px;
-    right: 5px;
+    right: 50px;
     cursor: pointer;
+}
+
+.copy-btn-main {
+    right: 10px;
 }
 
 .operation-btn {
@@ -38,4 +42,13 @@ body {
 
 textarea {
     min-height: 120px;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin-bottom: 0;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 0.25rem;
 }

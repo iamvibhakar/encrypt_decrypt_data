@@ -75,12 +75,15 @@
                         </button>
 
                         <div class="result-container" id="decryptResultContainer" style="display: none;">
-                            <button class="btn btn-sm btn-outline-secondary copy-btn"
+                            <button class="btn btn-sm btn-outline-secondary copy-btn copy-btn-main"
                                 onclick="copyToClipboard('decryptResult')">
                                 <i class="fas fa-copy"></i>
                             </button>
+                            <button id="beautifyBtn" class="btn btn-sm btn-outline-secondary copy-btn" style="display: none;">
+                                <i class="fas fa-indent me-2"></i>Beautify
+                            </button>
                             <h6>Decrypted Result:</h6>
-                            <div id="decryptResult" class="text-break"></div>
+                            <pre id="decryptResult" class="text-break mb-0"></pre>
                         </div>
                     </div>
                 </div>
